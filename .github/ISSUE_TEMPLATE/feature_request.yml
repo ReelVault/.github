@@ -1,0 +1,53 @@
+name: Feature request
+description: Suggest an idea or improvement
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for the suggestion. Please search
+        [existing issues](../issues) first — someone may have already
+        asked, and your +1 or extra detail there helps more than a
+        duplicate.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem does this solve?
+      description: Describe the use case or pain point. Focus on the "why" before the "how".
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: Proposed solution
+      description: What would you like to happen? Sketch the feature as you imagine it.
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: Any workarounds you're using now, or other approaches you thought about.
+
+  - type: dropdown
+    id: component
+    attributes:
+      label: Which part of ReelVault does this affect?
+      options:
+        - Server (reelvault)
+        - Web/Desktop client (website)
+        - Plugin SDK
+        - Plugin catalog
+        - Documentation
+        - Not sure
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional context
+      description: Mockups, links to similar features elsewhere, anything else useful.

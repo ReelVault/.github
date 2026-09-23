@@ -1,0 +1,5 @@
+# Default owner for everything, in every repo, unless overridden below.
+# Requires this file to also exist (or this repo's default to apply) in
+# each repository, and "Require review from Code Owners" enabled in that
+# repository's branch ruleset.
+*       @YOUR_GITHUB_USERNAME

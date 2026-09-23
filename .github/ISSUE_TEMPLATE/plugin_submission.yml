@@ -1,0 +1,89 @@
+name: Plugin submission
+description: Submit your plugin for inclusion in the official catalog
+labels: ["plugin-submission"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this to request that your plugin be added to the
+        [ReelVault plugin catalog](https://github.com/ReelVault/plugins).
+
+        Before submitting, make sure your plugin:
+        - Was built from (or is compatible with) the
+          [plugin template](https://github.com/ReelVault/plugin-template)
+        - Declares only the `capabilities` it actually uses in `plugin.json`
+        - Has a public repository with a build that produces a versioned
+          zip (see the template's `bun run build`)
+
+        See the [publishing guide](https://reelvault.org/plugins/publishing)
+        for the full catalog entry format.
+
+  - type: input
+    id: plugin-id
+    attributes:
+      label: Plugin ID
+      description: The reverse-domain identifier from your plugin.json (e.g. com.example.my-plugin).
+      placeholder: com.example.my-plugin
+    validations:
+      required: true
+
+  - type: input
+    id: plugin-name
+    attributes:
+      label: Plugin name
+    validations:
+      required: true
+
+  - type: input
+    id: repo-url
+    attributes:
+      label: Repository URL
+      placeholder: https://github.com/your-name/your-plugin
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: What does it do?
+      description: A short description for the catalog listing.
+    validations:
+      required: true
+
+  - type: input
+    id: category
+    attributes:
+      label: Category
+      description: e.g. metadata provider, subtitle provider, marker, job, UI extension.
+    validations:
+      required: true
+
+  - type: textarea
+    id: capabilities
+    attributes:
+      label: Declared capabilities
+      description: Paste the `capabilities` array from your plugin.json, and a one-line reason for each one.
+    validations:
+      required: true
+
+  - type: input
+    id: release-url
+    attributes:
+      label: Latest release URL
+      description: Link to the GitHub Release containing the built zip (and checksum, per the plugin template's build output).
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Checklist
+      options:
+        - label: The plugin builds successfully with `bun run build`
+          required: true
+        - label: capabilities in plugin.json match what the code actually uses
+          required: true
+        - label: The repository has a LICENSE file
+          required: true
+        - label: I've read the publishing guide at reelvault.org/plugins/publishing
+          required: true

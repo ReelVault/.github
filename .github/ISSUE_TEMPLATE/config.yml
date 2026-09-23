@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Security vulnerability
+    url: https://github.com/ReelVault/.github/security/advisories/new
+    about: Please report security vulnerabilities privately, not as a public issue.
+  - name: Documentation
+    url: https://reelvault.org
+    about: Check the docs before filing — your question might already be answered.
+  - name: Discussions
+    url: https://github.com/orgs/ReelVault/discussions
+    about: For open-ended questions or ideas that aren't quite a bug or feature request yet.
