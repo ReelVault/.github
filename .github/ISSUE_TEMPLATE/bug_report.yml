@@ -56,7 +56,6 @@ body:
         - Docker
         - From source (bun dev)
         - Release binary / installer
-        - Desktop app (Tauri)
         - Other (specify below)
     validations:
       required: true

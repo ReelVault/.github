@@ -12,7 +12,7 @@
 
 ## Checklist
 
-- [ ] I ran `bun run lint`, `bun run check-types`, `bun run deadcode`, and `bun test` locally and they pass
+- [ ] I ran this repository's checks locally (see [CONTRIBUTING.md](https://github.com/ReelVault/.github/blob/main/CONTRIBUTING.md)) and they pass
 - [ ] I've added or updated tests where it makes sense
 - [ ] I've updated documentation if this changes user-facing behavior
 - [ ] This PR is scoped to one change (unrelated fixes are in separate PRs)
